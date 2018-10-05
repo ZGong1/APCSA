@@ -21,34 +21,51 @@ public class GoodMath {
    quotNum = 0.0;
   }
   
-  public int highest(int a, int b, int c, int d, int e) {
-  int highest = Math.max(a, Math.max(b, Math.max(c, Math.max(d, e))));
+  public int highest() {
+  int highest = Math.max(num1, Math.max(num2, Math.max(num3, Math.max(num4, num5))));
   highNum = highest;
   return highest;
   }
   
-  public int lowest(int a, int b, int c, int d, int e) {
-   int lowest = Math.min(a, Math.min(b, Math.min(c, Math.min(d, e))));
+  public int lowest() {
+   int lowest = Math.min(num1, Math.min(num2, Math.min(num3, Math.min(num4, num5))));
    lowNum = lowest;
    return lowest;
   }
   
-  // highest divided by lowest
-  
   public double divide() {
    quotNum = (double)highNum/lowNum;
+   return quotNum;
   }
   
-  // product of all
+  public int multiply() {
+   prodNum = num1*num2*num3*num4*num5;
+   return prodNum;
+  }
   
-  //sum of all
+  public int add() {
+   sumNum = num1+num2+num3+num4+num5;
+   return sumNum;
+  }
   
   public static void main(String[] args) {
    GoodMath morth = new GoodMath();
-   System.out.println(morth.highest(1, 5, 50, 20, 4));
-   System.out.println(morth.lowest(3, 5, 50, 20, 18));
+   Scanner k = new Scanner(System.in);
+   System.out.println("Enter five integers.");
+   morth.num1 = k.nextInt();
+   morth.num2 = k.nextInt();
+   morth.num3 = k.nextInt();
+   morth.num4 = k.nextInt();
+   morth.num5 = k.nextInt();
+   
+   System.out.println(morth.highest() + " is the highest number.");
+   System.out.println(morth.lowest() + " is the lowest number.");
+   System.out.println(morth.multiply() + " is all of the numbers multiplied.");
+   System.out.println(morth.divide() + " is the highest divided by the lowest.");
+   System.out.println(morth.add() + " is all of the numbers added.");
+   
   }
-
+// highest lowest multiply divide add
   
   
 }
