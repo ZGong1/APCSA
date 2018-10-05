@@ -22,15 +22,15 @@ public class GoodMath {
   }
   
   public int highest() {
-  int highest = Math.max(num1, Math.max(num2, Math.max(num3, Math.max(num4, num5))));
-  highNum = highest;
-  return highest;
+  int returnNum = Math.max(num1, Math.max(num2, Math.max(num3, Math.max(num4, num5))));
+  highNum = returnNum;
+  return returnNum;
   }
   
   public int lowest() {
-   int lowest = Math.min(num1, Math.min(num2, Math.min(num3, Math.min(num4, num5))));
-   lowNum = lowest;
-   return lowest;
+   int returnNum = Math.min(num1, Math.min(num2, Math.min(num3, Math.min(num4, num5))));
+   lowNum = returnNum;
+   return returnNum;
   }
   
   public double divide() {
