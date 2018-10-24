@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class theprojectm89 {
+public class theprojectm8 {
     public static void main(String[] args) {
         Scanner k = new Scanner(System.in);
         while (true) {
