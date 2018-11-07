@@ -2,6 +2,7 @@ import java.util.Scanner;
  
 public class project8 {
    public static void main(String[] args) {
+    while (true) {
       String original, reverse = "";
       Scanner k = new Scanner(System.in);
      
@@ -17,6 +18,6 @@ public class project8 {
          System.out.println("The string is a palindrome.");
       else
          System.out.println("The string isn't a palindrome.");
-         
+    }
    }
 }  
