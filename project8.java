@@ -6,7 +6,7 @@ public class project8 {
       Scanner k = new Scanner(System.in);
      
       System.out.println("Enter a string to check if it is a palindrome");
-      original = k.nextLine();
+      original = k.nextLine().upper();
      
       int length = original.length();
      
