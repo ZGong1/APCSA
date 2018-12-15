@@ -1,0 +1,35 @@
+public class HelloWorld{
+    static String[][] grid = {{"Dallas","Houstin","San Antonio","El Paso","Fort Worth","Arlington","Laredo","Plano","Corpus Christi","Grand Prarie","Amarillo","Irving","Garland","Lubbock"},{"1.3","2.2","1.5","0.7","0.8","0.4","0.3","0.3","0.3","0.2","0.2","0.2","0.2","0.2"}};
+    
+    public static void mySort(int index) {
+        
+        
+        if(index >= 1 && Double.parseDouble(grid[1][index]) > Double.parseDouble(grid[1][index-1])) {
+            String temp = grid[1][index - 1];
+            grid[1][index - 1] = grid[1][index];
+            grid[1][index] = temp;
+            
+            temp = grid[0][index - 1];
+            grid[0][index - 1] = grid[0][index];
+            grid[0][index] = temp;
+        }
+        
+    }
+    
+    
+     public static void main(String []args){
+         System.out.println("Before:");
+         for(int i = 0; i < grid[1].length; i++) 
+            System.out.println(grid[0][i] + " = " + grid[1][i]);
+         
+         // i can build these into the sort method but i'm too lazy and i have many quizes and tests to study for
+         // also i hardcoded them in not in order so i could sort by number
+         for(int i = 0; i < grid[1].length; i++)
+            for(int j = 0; j < 15; j++)
+                mySort(i);
+         
+        System.out.println("\n\n\nAfter:");
+        for(int i = 0; i < grid[1].length; i++) 
+            System.out.println(grid[0][i] + " = " + grid[1][i]);
+     }
+}
