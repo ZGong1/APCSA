@@ -1,1 +1,1 @@
-<h1> APCSA </h1>
+<h1 style="align='center'"> APCSA </h1>
