@@ -1,3 +1,4 @@
+import java.util.*;
 public class HelloWorld{
     static String[][] grid = {{"Dallas","Houstin","San Antonio","El Paso","Fort Worth","Arlington","Laredo","Plano","Corpus Christi","Grand Prarie","Amarillo","Irving","Garland","Lubbock"},{"1.3","2.2","1.5","0.7","0.8","0.4","0.3","0.3","0.3","0.2","0.2","0.2","0.2","0.2"}};
     
@@ -16,20 +17,52 @@ public class HelloWorld{
         
     }
     
+    public static void shuffleSort() {
+        for(int i = 0; i < grid[1].length; i++)
+            for(int j = 0; j < 15; j++)
+                mySort(i);
+    }
+    
+    public static void nameSearch() {
+        Scanner k = new Scanner(System.in);
+        String input = k.nextLine();
+        int counter = 0;
+        
+        
+        for (int i = 0; i < grid.length; i++) {
+            for (int j = 0; j < grid[1].length; j++) {
+                if (input.equals(grid[i][j])) {
+                    System.out.println(grid[0][j] + " = " + grid[1][j]);
+                    counter++;
+                }
+            }
+        }
+        
+        if (counter == 0) {
+         System.out.println("No cities were found in that name, and no cities had that population."); 
+        }
+    }
+    
+    public static void populationSearth() {
+        Scanner k = new Scanner(System.in);
+        String input = k.nextLine();
+    }
+    
     
      public static void main(String []args){
          System.out.println("Before:");
          for(int i = 0; i < grid[1].length; i++) 
             System.out.println(grid[0][i] + " = " + grid[1][i]);
          
-         // i can build these into the sort method but i'm too lazy and i have many quizes and tests to study for
-         // also i hardcoded them in not in order so i could sort by number
-         for(int i = 0; i < grid[1].length; i++)
-            for(int j = 0; j < 15; j++)
-                mySort(i);
+        shuffleSort();
          
         System.out.println("\n\n\nAfter:");
         for(int i = 0; i < grid[1].length; i++) 
             System.out.println(grid[0][i] + " = " + grid[1][i]);
+            
+        System.out.println("Search cities by name, or by population in the millions");
+        
+        while(true)
+          nameSearch();
      }
 }
